@@ -128,5 +128,5 @@ just hit
 
 
 ### Credits
-
-this project is an evolution of the https://github.com/laradock/workspace from Laradock.
+Based on https://github.com/buonzz/cli-workspace
+which is an evolution of the https://github.com/laradock/workspace from Laradock.
