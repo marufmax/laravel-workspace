@@ -1,7 +1,7 @@
 ARG PHP_VERSION=7.2
 FROM laradock/workspace:2.2-${PHP_VERSION}
 
-LABEL maintainer="Darwin Biler <buonzz@gmail.com>"
+LABEL maintainer="Maruf Alom <desk.maruf@gmail.com>"
 
 # Start as root
 USER root
