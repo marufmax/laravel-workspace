@@ -233,8 +233,3 @@ WORKDIR /var/www
 # Installing Node & Composer Denedencies
 COPY composer.json .
 RUN composer install --prefer-source --no-interaction
-
-COPY package.json .
-RUN npm install --quiet
-
-COPY . .
