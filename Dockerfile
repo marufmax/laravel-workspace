@@ -209,9 +209,10 @@ RUN if [ ${INSTALL_YARN} = true ]; then \
 RUN apt-get install mysql-client -y
 
 
-# install wget
+# install wget and zip
 RUN apt-get update
 RUN apt install wget -y
+RUN apt install zip -y
 
 #
 #--------------------------------------------------------------------------
@@ -228,3 +229,12 @@ RUN apt-get clean && \
 
 # Set default work directory
 WORKDIR /var/www
+
+# Installing Node & Composer Denedencies
+COPY composer.json .
+RUN composer install --prefer-source --no-interaction
+
+COPY package.json .
+RUN npm install --quiet
+
+COPY . .
